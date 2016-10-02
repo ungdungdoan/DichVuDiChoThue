@@ -1,4 +1,4 @@
-
+ 
 insert into nhanVien values('001','vtm','01885667518','binhduong')
 insert into nhanVien values('002','vth','01885667517','binhduong')
 insert into nhanVien values('003','vtk','01885667516','binhduong')
