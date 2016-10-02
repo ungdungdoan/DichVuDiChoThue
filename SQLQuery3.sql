@@ -23,6 +23,7 @@ dongia int,
 soluong int,
 constraint pk_matHang primary key(maMH)
 )
+
 create table HoaDon
 (
 maHD char(15) not null,
