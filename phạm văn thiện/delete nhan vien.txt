@@ -1,0 +1,16 @@
+JButton btndelete = new JButton("delete");
+		btndelete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String query="delete from nhanVien where maNV='"+textma.getText()+"'";
+					PreparedStatement pst=con.prepareStatement(query);
+					pst.execute();
+					JOptionPane.showMessageDialog(null,"Xóa thành công");
+					pst.close();
+					
+					
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
+			}
+		});

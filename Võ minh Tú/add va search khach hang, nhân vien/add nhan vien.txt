@@ -1,0 +1,20 @@
+
+		JButton btnadd = new JButton("add");
+		btnadd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					String query ="insert into Khachhang(maNV,tenNV,sdtNV,diachiNV) values (?,?,?,?)";
+					PreparedStatement pst= con.prepareStatement(query);
+					pst.setString(1, textma.getText());
+					pst.setString(2, textten.getText());
+					pst.setString(3, textsdt.getText());
+					pst.setString(4, textdc.getText());
+					pst.execute();
+					JOptionPane.showMessageDialog(null,"add thanh cong");
+					pst.close();
+					
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
+			}
+		});
