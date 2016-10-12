@@ -1,0 +1,16 @@
+JButton btnupdate = new JButton("update");
+		btnupdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String query="Update KhachHang set maKH='"+txtma.getText()+"',tenkh='"+txtten.getText()+"',gioitinh='"+txtgt.getText()+"',sdt='"+txtsdt.getText()+"',dachi='"+txtdc.getText()+"' where maKH='"+txtma.getText()+"' ";
+					PreparedStatement pst=connection.prepareStatement(query);
+					pst.execute();
+					JOptionPane.showMessageDialog(null,"Ch?nh s?a thành công");
+					pst.close();
+					
+					
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
+			}
+		});
